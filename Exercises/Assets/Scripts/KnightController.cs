@@ -37,11 +37,12 @@ public class KnightController : MonoBehaviour
                 moveDir = new Vector3(0, 0, 1);
                 moveDir *= speed;
                 moveDir = transform.TransformDirection(moveDir);
+                print("Pressed W.");
             }
             if (Input.GetKeyUp(KeyCode.W))
             {
                 anim.SetInteger("IsRunning", 0);
-                moveDir = new Vector3(0,0,0);
+                moveDir = new Vector3(0, 0, 0);
             }
 
 
@@ -52,14 +53,13 @@ public class KnightController : MonoBehaviour
                 anim.SetInteger("IsRunning", 1);
                 moveDir = new Vector3(0, 0, 1);
                 moveDir = transform.TransformDirection(moveDir);
-                //moveDir = cameraTransform.TransformDirection(moveDir);
                 moveDir *= speed;
 
-            } 
+            }
             else
             {
-                    anim.SetInteger("IsRunning", 0);
-                    moveDir = new Vector3(0, 0, 0);
+                anim.SetInteger("IsRunning", 0);
+                moveDir = new Vector3(0, 0, 0);
             }
 
 
